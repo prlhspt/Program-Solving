@@ -13,7 +13,7 @@ public class Change {
         // 50으로 1번 나누고 10
         // 10으로 1번 나누고 0
 
-        for(int i = 0; i < coins.length; i++) {
+        for (int i = 0; i < coins.length; i++) {
             int coin = coins[i];
             answer += (n / coin);
             n %= coin;
