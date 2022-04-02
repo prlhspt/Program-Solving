@@ -41,22 +41,22 @@ public class Kruskal {
     }
 
     // 노드의 개수 v, 간선의 개수 e
-    static int v, e;
-    static int[] parent = new int[100001];
+    static private int v, e;
+    static private int[] parent;
 
     // 모든 간선을 담을 리스트와 최종 비용을 담을 변수
     static ArrayList<Edge> edges = new ArrayList<>();
-    static int result = 0;
+    static private int result = 0;
 
     // 특정 원소가 속한 집합을 찾기
-    static int findParent(int x) {
+    static private int findParent(int x) {
         if (x == parent[x]) {
             return x;
         }
         return parent[x] = findParent(parent[x]);
     }
 
-    static void unionParent(int a, int b) {
+    static private void unionParent(int a, int b) {
         a = findParent(a);
         b = findParent(b);
         if (a < b) {
@@ -79,9 +79,13 @@ public class Kruskal {
 6 7 25
      */
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc= new Scanner(System.in);
 
+        // 노드의 개수
         v = sc.nextInt();
+        parent = new int[v+1];
+
+        // 간선의 개수
         e = sc.nextInt();
 
         for (int i = 1; i <= v; i++) {
@@ -97,7 +101,7 @@ public class Kruskal {
 
         Collections.sort(edges);
 
-        for (int i = 0; i < edges.size(); i++) {
+        for (int i = 0; i < e; i++) {
             int cost = edges.get(i).getDistance();
             int a = edges.get(i).getNodeA();
             int b = edges.get(i).getNodeB();
