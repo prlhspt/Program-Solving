@@ -10,7 +10,7 @@ import java.util.Scanner;
 5 5 6 6 5
  */
 
-public class ReplaceElemenet {
+public class ReplaceElement {
 
     public static void main(String[] args) {
 

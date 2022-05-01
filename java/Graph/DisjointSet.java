@@ -8,7 +8,7 @@ public class DisjointSet {
     static int v, e;
 
     // 간선의 개수는 최대 100,000개라고 가정
-    static int[] parent = new int[100001];
+    static int[] parent;
 
     // 특정 원소가 속한 집합을 찾기
     static int findParent(int x) {
@@ -39,6 +39,8 @@ INPUT
 
         v = sc.nextInt();
         e = sc.nextInt();
+
+        parent = new int[v+1];
 
         // 부모를 자기 자신으로 초기화
         for (int i = 1; i <= v; i++) {

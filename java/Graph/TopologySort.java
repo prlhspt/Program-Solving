@@ -7,6 +7,7 @@ import java.util.*;
  */
 public class TopologySort {
 
+    // vertex(정점), edge(간선)
     static int v, e;
     static int[] inDegree = new int[100001];
     static List<List<Integer>> graph = new ArrayList<>();

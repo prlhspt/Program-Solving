@@ -2,7 +2,14 @@ package Graph;
 
 import java.util.Scanner;
 
-public class DiscriminateDisjoint {
+/*
+Input
+3 3
+1 2
+2 3
+1 3
+ */
+public class IsCycle {
 
     // 노드의 개수 v, 간선의 개수 e
     static int v, e;
